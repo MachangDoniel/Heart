@@ -1,5 +1,8 @@
 package com.example.cardiacrecorder;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,9 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -29,7 +31,7 @@ public class Test extends AppCompatActivity {
     String testId;
 
     TextView Name, HeartRate, Systolic, Diastolic, Date, Time, Comment;
-    ImageView Edit;
+    ImageView Edit, Delete;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +45,7 @@ public class Test extends AppCompatActivity {
         Time=findViewById(R.id.time);
         Comment=findViewById(R.id.comment);
         Edit=findViewById(R.id.edit);
+        Delete=findViewById(R.id.delete);
 
         testId=getIntent().getStringExtra("testId");
         ref= FirebaseDatabase.getInstance().getReference("Details").child(userId).child(testId);
@@ -73,9 +76,9 @@ public class Test extends AppCompatActivity {
                     Time.setText(time);
                     Comment.setText(comment);
                 }
-                else{
-                    Toast.makeText(Test.this, "Something went Wrong", Toast.LENGTH_SHORT).show();
-                }
+//                else{
+//                    Toast.makeText(Test.this, "Something went Wrong hahahha", Toast.LENGTH_SHORT).show();
+//                }
             }
 
             @Override
@@ -84,7 +87,38 @@ public class Test extends AppCompatActivity {
             }
         });
 
+        Edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Test.this, EditTest.class);
+                intent.putExtra("testId", testId);
+                startActivity(intent);
+            }
+        });
+        Delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Details").child(userId).child(testId);
+                ref.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        snapshot.getRef().removeValue();
+                        Toast.makeText(Test.this, "Item is deleted Successfully", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                Intent intent = new Intent(Test.this, Home.class);
+                intent.putExtra("testId", testId);
+                startActivity(intent);
+            }
+        });
     }
+
+
     public void onBackPressed() {
         Intent intent = new Intent(Test.this, Home.class);
         startActivity(intent);

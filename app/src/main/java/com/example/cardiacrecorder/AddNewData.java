@@ -1,14 +1,14 @@
 package com.example.cardiacrecorder;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -68,16 +68,16 @@ public class AddNewData extends AppCompatActivity {
             return;
         }
         else if(heartRateValue<60){
-            comment="Bradycardia(slow heart rate), ";
+            comment=" Bradycardia(slow heart rate)";
         }
         else if(heartRateValue<=120){
-            comment="Normal Heart Rate, ";
+            comment=" Normal Heart Rate";
         }
         else if(heartRateValue<-200){
-            comment="Tachycardia(fast heart rate), ";
+            comment=" Tachycardia(fast heart rate)";
         }
         else{
-            Heartrate.setError("Heart rate is too much");
+            Heartrate.setError(" Heart rate is too much");
             Heartrate.requestFocus();
             return;
         }
@@ -89,24 +89,24 @@ public class AddNewData extends AppCompatActivity {
         }
 
         if(systolicValue<0){
-            Systolic.setError("Systolic rate can't be negative");
+            Systolic.setError("Systolic rate can't be too small");
             Systolic.requestFocus();
             return;
         }
         else if(systolicValue<=120){
-            comment+="Normal systolic pressure, ";
+            comment+="\n Normal systolic pressure";
         }
         else if(systolicValue<=129){
-            comment+="Elavated systolic pressure, ";
+            comment+="\n Elavated systolic pressure";
         }
         else if(systolicValue<=139){
-            comment+="Hypertension stage 1 systolic pressure, ";
+            comment+="\n Hypertension stage 1 systolic pressure";
         }
         else if(systolicValue<=179){
-            comment+="Hypertension stage 2 systolic pressure, ";
+            comment+="\n Hypertension stage 2 systolic pressure";
         }
         else if(systolicValue<=250){
-            comment+="Hypertension crisis systolic pressure, ";
+            comment+="\n Hypertension crisis systolic pressure";
         }
         else{
             Systolic.setError("Heart rate is too much");
@@ -120,19 +120,19 @@ public class AddNewData extends AppCompatActivity {
             return;
         }
         else if(diastolicValue<=80){
-            comment+="Normal diastolic pressure. ";
+            comment+="\n Normal diastolic pressure";
         }
         else if(diastolicValue<=89){
-            comment+="Elavated diastolic pressure. ";
+            comment+="\n Elavated diastolic pressure";
         }
         else if(diastolicValue<=99){
-            comment+="Hypertension stage 1 diastolic pressure. ";
+            comment+="\n Hypertension stage 1 diastolic pressure";
         }
         else if(diastolicValue<=119){
-            comment+="Hypertension stage 2 diastolic pressure. ";
+            comment+="\n Hypertension stage 2 diastolic pressure";
         }
         else if(diastolicValue<=200){
-            comment+="Hypertension crisis diastolic pressure. ";
+            comment+="\n Hypertension crisis diastolic pressure";
         }
         else{
             Diastolic.setError("Diastolic rate is too much");
@@ -145,7 +145,7 @@ public class AddNewData extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 long maxid=snapshot.child(userId).getChildrenCount();
-                Toast.makeText(AddNewData.this, "Maxid is: "+maxid, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(AddNewData.this, "Maxid is: "+maxid, Toast.LENGTH_SHORT).show();
                 int newId = (int) (max-maxid); // Decrement the max id by 1
                 String name = Name.getText().toString().trim();
                 String date = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());

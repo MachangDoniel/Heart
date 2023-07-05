@@ -251,5 +251,20 @@
 
         </LinearLayout>
 
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="410dp"
+            android:layout_marginTop="450dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onButtonClick"
+            android:src="@drawable/ic_delete" />
+
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

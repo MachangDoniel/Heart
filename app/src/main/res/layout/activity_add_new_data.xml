@@ -3,22 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/medibackground3"
     tools:context=".Registration">
 
 
     <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:gravity="fill">
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add New Data"
-            android:textColor="@color/newcolor"
-            android:textSize="40sp"
-            android:textStyle="bold" />
+        android:layout_height="50dp"
+        android:text="Add Record"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:background="#03A9F4"
+        android:textColor="@color/white" />
 
 
     </LinearLayout>
@@ -75,7 +76,7 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:background="@drawable/bc_rounded"
-                    android:drawableLeft="@drawable/ic_email"
+                    android:drawableLeft="@drawable/ic_heart"
                     android:hint="  Heart Rate"
                     android:inputType="number"
                     android:textColor="@color/newcolor"
@@ -94,7 +95,7 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:background="@drawable/bc_rounded"
-                    android:drawableLeft="@drawable/ic_email"
+                    android:drawableLeft="@drawable/ic_up"
                     android:hint="  Systolic Pressure"
                     android:inputType="number"
                     android:textColor="@color/newcolor"
@@ -113,7 +114,7 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:background="@drawable/bc_rounded"
-                    android:drawableLeft="@drawable/ic_email"
+                    android:drawableLeft="@drawable/ic_down"
                     android:hint="  Diastolic Pressure"
                     android:inputType="number"
                     android:textColor="@color/newcolor"
