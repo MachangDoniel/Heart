@@ -3,22 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/medibackground3"
+    android:background="@drawable/background2"
     tools:context=".Registration">
 
 
     <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:gravity="fill">
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Registration"
-            android:textColor="@color/newcolor"
-            android:textSize="40sp"
-            android:textStyle="bold" />
+        android:layout_height="50dp"
+        android:text="Register Here"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:background="#03A9F4"
+        android:textColor="@color/white" />
 
 
     </LinearLayout>

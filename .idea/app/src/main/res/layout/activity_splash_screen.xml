@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/background2"
     android:gravity="bottom"
     tools:context=".SplashScreen">
 
@@ -13,20 +13,19 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginTop="200dp"
-        android:gravity="center"
-        android:background="@color/white">
+        android:gravity="center">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_add"/>
+            android:src="@drawable/ic_medical"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="𝒯𝒽𝑒 𝒮𝒶𝒻𝑒𝓈𝓉 𝐻𝒶𝓃𝒹"
+            android:text="𝕋𝕙𝕖 𝕘𝕦𝕚𝕕𝕖 𝕗𝕠𝕣 𝕪𝕠𝕦𝕣 𝕙𝕖𝕒𝕣𝕥"
             android:textSize="20dp"
-            android:textColor="@color/newcolor"
+            android:textColor="@color/purple_700"
             android:textStyle="bold"/>
 
     <ProgressBar

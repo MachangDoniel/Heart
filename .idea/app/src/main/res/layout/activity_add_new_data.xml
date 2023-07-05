@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration">
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:gravity="fill">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Add Record"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:background="#03A9F4"
+        android:textColor="@color/white" />
+
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="600dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:textColor="@color/newcolor" />
+
+                <EditText
+                    android:autofillHints="name"
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bc_rounded"
+                    android:drawableLeft="@drawable/ic_name"
+                    android:hint="  Name"
+                    android:inputType="text"
+                    android:textColor="@color/newcolor"
+                    android:textSize="20sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hear Rate:"
+                    android:textColor="@color/newcolor" />
+
+                <EditText
+                    android:autofillHints="heartrate"
+                    android:id="@+id/heartrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bc_rounded"
+                    android:drawableLeft="@drawable/ic_heart"
+                    android:hint="  Heart Rate"
+                    android:inputType="number"
+                    android:textColor="@color/newcolor"
+                    android:textSize="20sp" />
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Systolic Preessure:"
+                    android:textColor="@color/newcolor" />
+
+                <EditText
+                    android:autofillHints="systolic"
+                    android:id="@+id/systolic"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bc_rounded"
+                    android:drawableLeft="@drawable/ic_up"
+                    android:hint="  Systolic Pressure"
+                    android:inputType="number"
+                    android:textColor="@color/newcolor"
+                    android:textSize="20sp" />
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diastolic Preessure:"
+                    android:textColor="@color/newcolor" />
+
+                <EditText
+                    android:autofillHints="diastolic"
+                    android:id="@+id/diastolic"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bc_rounded"
+                    android:drawableLeft="@drawable/ic_down"
+                    android:hint="  Diastolic Pressure"
+                    android:inputType="number"
+                    android:textColor="@color/newcolor"
+                    android:textSize="20sp" />
+
+
+                <Button
+                    android:id="@+id/add"
+                    android:layout_width="75dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_rounded"
+                    android:text="Add"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

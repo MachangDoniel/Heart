@@ -1,13 +1,13 @@
 package com.example.cardiacrecorder;
 
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -27,7 +27,7 @@ public class SplashScreen extends AppCompatActivity {
         Thread thread=new Thread(new Runnable() {
             @Override
             public void run() {
-//                splash();
+                splash();
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user != null) {
                     // User is signed in
@@ -48,7 +48,7 @@ public class SplashScreen extends AppCompatActivity {
     private void splash() {
         for(progress=2;progress<100;progress+=2) {
             try {
-                Thread.sleep(30);
+                Thread.sleep(50);
                 progressBar.setProgress(progress);
             } catch (InterruptedException e) {
                 e.printStackTrace();
