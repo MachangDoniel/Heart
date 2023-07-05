@@ -22,16 +22,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Welcome"
-            android:textColor="@color/newcolor"
+            android:textColor="#FF0000"
             android:textSize="45sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="to"
+            android:textSize="35sp"
+            android:textColor="#FF0000"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="to Cardiac Recorder"
-            android:textColor="@color/newcolor"
+            android:text="Cardiac Recorder"
+            android:textSize="45sp"
+            android:textColor="@color/black"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -40,15 +49,15 @@
             android:layout_marginTop="30dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/bc_rounded"
-            android:textColor="@color/newcolor">
+            android:textColor="@color/black">
 
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:drawableLeft="@drawable/ic_email"
-                android:hint="  Phone No or Account No"
-                android:textColor="@color/newcolor"
+                android:hint="  Email Address"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
         </LinearLayout>
 
@@ -63,12 +72,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:drawableLeft="@drawable/ic_security"
-                android:hint="  Password"
+                android:hint="  Enter Password"
                 android:inputType="textPassword"
                 android:textColor="@color/newcolor"
                 android:textSize="20dp" />
 
         </LinearLayout>
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/login"
             android:layout_width="match_parent"
@@ -76,7 +86,10 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/bg_rounded"
+            android:backgroundTint="@color/black"
+            android:fontFamily="sans-serif"
             android:text="Login"
+            android:textAlignment="center"
             android:textColor="@color/white"
             app:cornerRadius="10dp" />
 
@@ -86,7 +99,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/bg_rounded"
             android:backgroundTint="@color/white"
-            android:text="Forgotten Password"
+            android:text="  Forgotten Password  "
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -102,8 +115,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/bg_rounded"
-            android:backgroundTint="@color/teal_200"
-            android:text="Create New Account"
+            android:backgroundTint="#243BB6"
+            android:text="  Create New Account  "
             android:textColor="@color/white"
             app:cornerRadius="10dp" />
     </LinearLayout>

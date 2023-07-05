@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background2"
+    android:background="@drawable/star"
     android:gravity="bottom"
     tools:context=".SplashScreen">
 
@@ -30,7 +30,7 @@
 
     <ProgressBar
         android:progressBackgroundTint="#f9f9f9"
-        android:progressTint="#02b3b9"
+        android:progressTint="#E91E63"
         android:id="@+id/progressBar"
         android:layout_margin="80dp"
         android:layout_width="match_parent"

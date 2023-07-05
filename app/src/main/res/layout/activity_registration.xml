@@ -100,9 +100,9 @@
                         android:layout_width="90dp"
                         android:layout_height="50dp"
                         android:drawableLeft="@drawable/ic_phone"
+                        android:inputType="number"
                         android:text="  +880"
                         android:textColor="@color/newcolor"
-                        android:inputType="number"
                         android:textSize="20sp" />
 
                     <EditText

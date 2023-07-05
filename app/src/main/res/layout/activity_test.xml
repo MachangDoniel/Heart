@@ -18,7 +18,7 @@
             android:textStyle="bold"
             android:textSize="30sp"
             android:gravity="center"
-            android:background="@color/purple_700"
+            android:background="#03A9F4"
             android:textColor="@color/white" />
 
 
