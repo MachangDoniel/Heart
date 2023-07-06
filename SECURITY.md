@@ -10,4 +10,4 @@ The lastest version is hopefully error or bug free. all bugs have been fixed.
 
 ## Reporting a Vulnerability
 
-If any bug found report this to: das1907118@stud.kuet.ac.bd or tripura1907121@stud.kuet.ac.bd
+If any bug found, please report that to: das1907118@stud.kuet.ac.bd or tripura1907121@stud.kuet.ac.bd
