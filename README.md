@@ -57,7 +57,7 @@ The App is to be used to store data of a patient with the goal of analysing hear
 </table> 
 
 <br />
-If you are interested enough to know more please visit <a href="https://github.com/MachangDoniel">our git wiki</a>
+If you are interested enough to know more please visit <a href="https://github.com/MachangDoniel/Heart/wiki">our git wiki</a>
 <br />
 Thanks,<br />
 <a href="https://github.com/PKD118">Biduyt Das</a><br />
